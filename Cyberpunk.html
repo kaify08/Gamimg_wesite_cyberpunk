@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk-Themed Website</title>
+<link rel="stylesheet" href="themes.css">    
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  window.onload = () => AOS.init({ duration: 1200, once: true });
+</script>
+
+    
+</head>
+<body>
+
+   <header class="cyberpunk-header">
+  <div class="logo-container">
+    <img src="logo.png" alt="Cyberpunk Logo" class="cyberpunk-logo">
+  </div>
+  <nav class="cyberpunk-nav">
+    <ul>
+      <li><a href="#">GAMES ▾</a></li>
+      <li><a href="character.html">CHARACTERS ▾</a></li>
+      <li><a href="#">COMMUNITY ▾</a></li>
+      <li><a href="#">MORE ▾</a></li>
+      <li><a href="#">EN ▾</a></li>
+    </ul>
+  </nav>
+  <a href="#" class="buy-now">BUY NOW</a>
+</header>
+
+
+
+
+    <section class="hero" id="home">
+        <h1>Welcome to Night City</h1>
+        <p>The city of dreams and endless possibilities.</p>
+        <button class="button">Explore</button>
+    </section>
+
+    <section class="cards" id="characters">
+        <div class="card" data-aos="fade-up">
+             <img src="card1.jpg" alt="#characters">
+            <h2>V - The Mercenary</h2>
+            <p>V grew up in the American wilderness, having been part of the Bakkers nomad family. At the age of 16, they made their first kill when Raffen Shiv scouts assaulted their camp, with V killing one of them with a single shot to the eye.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+             <img src="card2.jpg" alt="#characters">
+            <h2>Johnny Silverhand</h2>
+            <p>John enlisted in the military as a teenager after lying about his real age, and it didn't take long for him to see action. He was sent to Nicaragua to participate in the Second Central American War of 2003.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+             <img src="card3.jpg" alt="#characters">
+            <h2>Judy Álvarez</h2>
+            <p>Judy Álvarez is a skilled braindance techie and a member of the Mox. She has her own apartment in northeastern Kabuki, Watson. Judy is a possible romance option for V in Cyberpunk 2077.</p>
+        </div>
+    </section>
+
+    <section id="videos" style="padding: 60px 20px; background:rgba(0,0,0,0.8);">
+  <h2 style="text-align:center; color:#00ffc3; margin-bottom:30px" data-aos="zoom-in">Cyberpunk Tralior</h2>
+  
+  <div class="lazy-video-container">
+    <!-- Video 1 -->
+    <div class="lazy-video" data-video-id="4ZJKrhAjgE4">
+      <img src="https://www.youtube.com/watch?v=4ZJKrhAjgE4" alt="Cyberpunk Vibes">
+      <div class="play-button"></div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="lazy-video" data-video-id="qIcTM8WXFjk">
+      <img src="https://img.youtube.com/vi/qIcTM8WXFjk/hqdefault.jpg" alt="Cyberpunk 2077 Trailer">
+      <div class="play-button"></div>
+    </div>
+  </div>
+</section>
+
+
+    <footer>
+        &copy; 2025 Cyberpunk Universe created by Kaify. All Rights Reserved.
+    </footer>
+
+</body>
+
+<script>
+  // Custom glowing cursor
+  document.addEventListener("mousemove", function(e) {
+      const cursor = document.querySelector(".glow-cursor");
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+  });
+
+
+  document.querySelectorAll('.lazy-video').forEach(div => {
+    div.addEventListener('click', () => {
+      const videoId = div.getAttribute('data-video-id');
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', 'true');
+      iframe.setAttribute('allow', 'autoplay');
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      div.innerHTML = '';
+      div.appendChild(iframe);
+    });
+  });
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyberpunk Card Layout</title>
+  <link rel="stylesheet" href="themes.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #89898900;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .card-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+      max-width: 1500px;
+      margin:0 auto;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      background-color: #111;
+      border: 2px solid #ff0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      padding: 15px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0ff000;
+    }
+
+    .platforms {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: 2px solid #0ff;
+      color: #0ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .learn-more:hover {
+      background-color: #0ff;
+      color: black;
+    }
+
+    .netflix {
+      color: red;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="cyberpunk-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Cyberpunk Logo" class="cyberpunk-logo">
+    </div>
+    <nav class="cyberpunk-nav">
+      <ul>
+        <li><a href="Cyberpunk.html">HOME</a></li>
+        <li><a href="#">GAMES</a></li>
+        <li><a href="community.html">COMMUNITY</a></li>
+        <li><a href="#">EN</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="buy-now">BUY NOW</a>
+  </header>
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg" alt="Cyberpunk 2077">
+      <div class="card-content">
+        <div class="card-title">Cyberpunk 2077</div>
+        <div class="platforms">Xbox Series X|S, PS5, PC, PS4</div>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://cdn.akamai.steamstatic.com/steam/apps/2138330/capsule_616x353.jpg" alt="Phantom Liberty">
+      <div class="card-content">
+        <div class="card-title">Phantom Liberty</div>
+        <div class="platforms">Xbox Series X|S, PS5, PC</div>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="character2.webp" alt="Edgerunners">
+      <div class="card-content">
+        <div class="card-title">Edgerunners</div>
+        <div class="netflix">NETFLIX</div>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="character3.webp" alt="Gear">
+      <div class="card-content">
+        <div class="card-title">CD Projekt RED Gear</div>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

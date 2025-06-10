@@ -1,0 +1,293 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+        }
+
+       
+ 
+        /* --- Cyberpunk Nav Header --- */
+.cyberpunk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #000000b7 0%, #f6de0a91 100%);
+  padding: 10px 20px;
+  
+  font-family: 'Orbitron', sans-serif;
+  position: fixed;
+  height:10vh;
+  width: -50%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  opacity: 1;
+  clip-path: polygon(100% 0, 100% 50%, 100% 99%,0% 100%,7% 50%,0% 0%);
+
+}
+
+/* --- Logo Styling --- */
+.logo-container {
+  flex-shrink: 0;
+}
+.cyberpunk-logo {
+  height: 30vh;
+  width: 25vw;
+}
+
+/* --- Nav Links --- */
+.cyberpunk-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.cyberpunk-nav ul li {
+  position: relative;
+}
+
+.cyberpunk-nav ul li a {
+  display: block;
+  padding: 10px 18px;
+  background-color: #2b2b003a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #444000;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%, 0 50%);
+}
+
+.cyberpunk-nav ul li a:hover {
+  background-color: #ffe600;
+  color: #000;
+  box-shadow: 0 0 10px #fff500;
+}
+
+/* --- Buy Now Button --- */
+.buy-now {
+  margin-left: 10px;
+  padding: 12px 20px;
+  background-color: #ffff00;
+  color: #000;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.buy-now:hover {
+  background-color: #fff44f;
+  transform: scale(1.05);
+}
+
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+            color: rgb(0, 0, 0);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            text-shadow: 0 0 10px rgba(168, 129, 129, 0.7);
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            background-color: #f6ff00;
+            color: #000;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px #00ffea;
+            transition: transform 0.5s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #aaea09;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 1px 2px;
+            background: rgba(75, 73, 73, 0.389);
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.142);
+            padding: 10px 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 10px rgba(0, 17, 255, 0.8), 0 0 20px rgba(0, 51, 255, 0.8);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            color: #00ffea;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .card img{
+        height: 20rem;
+        width: 15rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+
+/* Neon Flicker Effect */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+.logo, .hero h1 {
+  animation: flicker 3s infinite;
+}
+
+/* Scroll Animation for Cards */
+.card {
+  opacity: 10;
+  transform: translateY(40px);
+}
+.card[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Animated underline nav */
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00ffea;
+  transition: width 0.3s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Pulse Button */
+.button {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 255, 234, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 255, 234, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 255, 234, 0); }
+}
+
+.lazy-video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.lazy-video {
+  position: relative;
+  width: 360px;
+  height: 202px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.lazy-video:hover {
+  transform: scale(1.03);
+}
+
+.lazy-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 255, 234, 0.8);
+  clip-path: polygon(25% 15%, 75% 50%, 25% 85%);
+  transform: translate(-50%, -50%);
+  animation: pulseGlow 2s infinite;
+  box-shadow: 0 0 15px #00ffea;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px #00ffea; }
+  50% { box-shadow: 0 0 20px #00ffea; }
+  100% { box-shadow: 0 0 10px #00ffea; }
+}
+
+/* characters page */
+.characters-page {
+  background-image: url('plan\ background.jpg'); /* Your new background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
