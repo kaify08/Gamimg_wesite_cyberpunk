@@ -25,11 +25,16 @@
       <li><a href="#">GAMES ▾</a></li>
       <li><a href="character.html">CHARACTERS ▾</a></li>
       <li><a href="#">COMMUNITY ▾</a></li>
-      <li><a href="#">MORE ▾</a></li>
+      <li><a href="more.html">MORE ▾</a></li>
       <li><a href="#">EN ▾</a></li>
     </ul>
   </nav>
-  <a href="#" class="buy-now">BUY NOW</a>
+  <a href="https://www.cyberpunk.net/us/en/buy" class="buy-now">BUY NOW</a>
+  <div class="deal-timer">
+  <span> Deal Ends In:</span>
+  <span id="timer">00:00:00</span>
+</div>
+
 </header>
 
 
@@ -107,6 +112,32 @@
       div.appendChild(iframe);
     });
   });
+
+  
+  function startDealTimer(durationInSeconds) {
+    const timerDisplay = document.getElementById("timer");
+    let remaining = durationInSeconds;
+
+    const updateTimer = () => {
+      const hours = String(Math.floor(remaining / 3600)).padStart(2, "0");
+      const minutes = String(Math.floor((remaining % 3600) / 60)).padStart(2, "0");
+      const seconds = String(remaining % 60).padStart(2, "0");
+      timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+      if (remaining > 0) {
+        remaining--;
+      } else {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = "EXPIRED";
+      }
+    };
+
+    updateTimer(); // initialize immediately
+    const timerInterval = setInterval(updateTimer, 1000);
+  }
+
+  // Start a 1-hour countdown (3600 seconds)
+  startDealTimer(3600);
+
 
 
 </script>
